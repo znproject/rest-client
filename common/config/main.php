@@ -20,7 +20,7 @@ return [
             'useFileTransport' => true,
         ],
         'authManager' => [
-            'class' => 'ZnSandbox\Sandbox\YiiRbac\Services\ManagerService',
+            'class' => 'yii\rbac\DbManager',
         ],
         'urlManager' => [
             'enablePrettyUrl' => true,
