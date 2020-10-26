@@ -47,7 +47,6 @@ return [
         'urlManager' => [
             'showScriptName' => false,
             'rules' => array_merge(
-                include __DIR__ . '/../../Packages/Eav/Yii2/Api/config/routes.php',
                 include __DIR__ . '/../../vendor/znbundle/messenger/src/Yii2/Api/config/routes.php',
                 include __DIR__ . '/../../vendor/znbundle/user/src/Yii2/Api/config/routes.php',
                 include __DIR__ . '/../../vendor/znbundle/notify/src/Yii2/Api/config/routes.php',

@@ -40,7 +40,6 @@ $singletons = [
 $definitions = [
     'ZnBundle\User\Domain\Interfaces\Entities\IdentityEntityInterface' => 'ZnBundle\User\Yii2\Entities\IdentityEntity',
 ];
-$definitions = array_merge($definitions, require(__DIR__ . '/../../Packages/Eav/Domain/config/container.php'));
 $definitions = array_merge($definitions, require(__DIR__ . '/../../vendor/zntool/rest-client/src/Domain/config/container.php'));
 $definitions = array_merge($definitions, require(__DIR__ . '/../../vendor/znbundle/dashboard/src/Domain/config/container.php'));
 $definitions = array_merge($definitions, require(__DIR__ . '/../../vendor/znbundle/user/src/Domain/config/container.php'));

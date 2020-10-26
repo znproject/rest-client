@@ -47,8 +47,6 @@ return [
     ],
     'migrate' => [
         'directory' => [
-            '/Packages/Shop/Domain/Migrations',
-            '/Packages/Eav/Domain/Migrations',
             '/vendor/zntool/rest-client/src/Domain/Migrations',
             '/vendor/znbundle/messenger/src/Domain/Migrations',
             '/vendor/znbundle/reference/src/Domain/Migrations',
