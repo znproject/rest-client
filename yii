@@ -1,0 +1,23 @@
+#!/usr/bin/env php
+<?php
+
+use ZnYii\App\Kernel;
+use ZnYii\App\Loader\AdvancedLoader;
+use ZnYii\App\Rails;
+use ZnCore\Base\Libs\DotEnv\DotEnv;
+
+require __DIR__ . '/vendor/autoload.php';
+
+DotEnv::init(__DIR__);
+$_ENV['PROJECT_DIR'] = realpath(__DIR__);
+$_ENV['APP_DIR'] = realpath(__DIR__ . '/console');
+$_ENV['APP_NAME'] = 'console';
+
+$loader = new AdvancedLoader($_ENV);
+$kernel = new Kernel($_ENV, $loader);
+$mainConfig = $kernel->run();
+//Rails::initAll($_ENV['PROJECT_DIR']);
+
+$application = new yii\console\Application($mainConfig);
+$exitCode = $application->run();
+exit($exitCode);
